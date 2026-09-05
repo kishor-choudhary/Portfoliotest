@@ -29,6 +29,7 @@ import { RippleButton, TraceButton } from "./components/InteractiveButtons";
 import ParallaxImage from "./components/ParallaxImage";
 import Navbar from "./components/Navbar";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "./components/ScrollReveal";
+import SpotifyPlayer from "./components/SpotifyPlayer";
 
 export default function App() {
   const [activeSheet, setActiveSheet] = useState("01");
@@ -149,7 +150,10 @@ export default function App() {
       {/* 3. Global Header/Navbar */}
       <Navbar />
 
-      {/* 4. Signature Floating Engineering Title Block (Bottom-Right on desktop) */}
+      {/* 4. Floating Spotify Music Node (bottom-left, matches glass UI) */}
+      <SpotifyPlayer />
+
+      {/* 5. Signature Floating Engineering Title Block (Bottom-Right on desktop) */}
       <div className="fixed right-6 bottom-6 z-40 hidden lg:block border border-white/10 bg-black/80 backdrop-blur-md font-mono text-[11px] text-zinc-400 w-64 shadow-2xl rounded-2xl overflow-hidden">
         <div className="bg-white/5 border-b border-white/10 px-3 py-2 font-bold text-purple-300 tracking-wider">
           SYSTEM STATUS PANEL

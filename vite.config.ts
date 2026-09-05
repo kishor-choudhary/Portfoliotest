@@ -18,6 +18,8 @@ export default defineConfig(() => {
       hmr: process.env.DISABLE_HMR !== 'true',
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
+      // Allow the Arena.ai live-preview host to reach the dev server.
+      allowedHosts: ['3000-ijkozdetaji6z8shxjnuw.e2b.app', '.e2b.app'],
     },
   };
 });
